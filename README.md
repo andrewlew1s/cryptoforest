@@ -1,3 +1,9 @@
+##Welcome!
+
+I made these ERC721 CryptoForest tokens recently. This is the repo for the development of the cryptoforest website. I'm using React for the first time.
+
+## Boring Stuff
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

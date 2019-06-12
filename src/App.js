@@ -10,7 +10,6 @@ function App() {
 		<Header />
 		<h1>Welcome to the CryptoForest website</h1>
 		<TokenDisplay />
-		<p> this works</p>
 		<Footer />
 	</div>
   );

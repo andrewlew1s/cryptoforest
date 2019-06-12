@@ -8,10 +8,15 @@ class TokenDisplay extends React.Component {
 		super(props);
 		this.state = {
 			tokenMetaData: [],
-			imageURLS: []
+			imageURLS: [],
+			randomNo: null
 		};
 	}
 	componentDidMount() {
+		const min = 0;
+		const max = 7;
+		const rand = Math.floor(min + Math.random() * (max - min));
+		this.setState({randomNo: this.state.randomNo + rand});
 		const NUMTOKENS = 7;
 		let metaData = this.state.tokenMetaData;
 		for(var i=1; i <=NUMTOKENS; i++){
@@ -30,10 +35,16 @@ class TokenDisplay extends React.Component {
 			)
 		}
 	}
+	renderImage() {
+		let rand = this.state.randomNo;
+		let string = this.state.imageURLS[rand];
+		console.log(rand)
+		return string;
+	}
 	render() {
 		return(
 			<div>
-				<img src={this.state.imageURLS[1]} alt="" />
+				<img height="350px" className="tokenImages" src={this.renderImage()} alt="" />
 			</div>
 		);
 	}

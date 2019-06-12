@@ -14,7 +14,6 @@ class TokenDisplay extends React.Component {
 	componentDidMount() {
 		const NUMTOKENS = 7;
 		let metaData = this.state.tokenMetaData;
-		let imgURLS = this.state.imageURLS;
 		for(var i=1; i <=NUMTOKENS; i++){
 			axios.get('https://crypto-forest.herokuapp.com/api/creature/' + i)
 			// eslint-disable-next-line no-loop-func

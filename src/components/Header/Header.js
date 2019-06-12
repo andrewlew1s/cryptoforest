@@ -1,10 +1,6 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import FormControl from 'react-bootstrap/FormControl';
-import Form from 'react-bootstrap/Form';
 import Logo from '../../assets/logo.svg'
 
 const header = () => {
@@ -17,7 +13,7 @@ const header = () => {
 			crossOrigin="anonymous"
 			/>
 			<Navbar bg="light" variant="light">
-				<Navbar.Brand href="#home">
+				<Navbar.Brand href="/">
 				<img
 					alt=""
 					src={Logo}

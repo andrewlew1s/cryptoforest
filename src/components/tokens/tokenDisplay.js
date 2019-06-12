@@ -10,7 +10,7 @@ class TokenDisplay extends React.Component {
 			tokenMetaData: [],
 		};
 	}
-	getImageMetaData() {
+	componentWillMount() {
 		const NUMTOKENS = 7;
 		let metaData = this.state.tokenMetaData;
 		for(var i=1; i <=NUMTOKENS; i++){
@@ -19,15 +19,13 @@ class TokenDisplay extends React.Component {
 				const tokenMetaData = res.data;
 				metaData = metaData.concat(tokenMetaData);
 				this.setState({tokenMetaData: metaData});
+				console.log(this.state)
 			})
 		}
-
-		console.log(this.state)
 	}
 	render() {
 		return(
 			<div>
-				<button onClick={() => this.getImageMetaData()} />
 				{/* <img src="this.imgURL" alt="" /> */}
 			</div>
 		);

@@ -2,11 +2,10 @@ import React from 'react';
 import './Landing.css';
 import Logo from '../../assets/logo.svg'
 
-
 const Landing = () => {
 	return (
 		<div className="landingWrapper">
-			<a  href="/" >
+			<a href="/" >
 				<img src={Logo} />
 			</a>
 			<h1>Welcome to the CryptoForest</h1>

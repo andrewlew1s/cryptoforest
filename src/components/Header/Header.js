@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import FormControl from 'react-bootstrap/FormControl';
 import Form from 'react-bootstrap/Form';
+import Logo from '../../assets/logo.svg'
 
 const header = () => {
 	return (
@@ -15,8 +16,17 @@ const header = () => {
 			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 			crossOrigin="anonymous"
 			/>
-			<Navbar bg="light" expand="lg">
-				<Navbar.Brand href="#home">CryptoForest</Navbar.Brand>
+			<Navbar bg="light" variant="light">
+				<Navbar.Brand href="#home">
+				<img
+					alt=""
+					src={Logo}
+					width="50"
+					height="32"
+					className="d-inline-block align-top"
+				/>
+				{' CryptoForest '}
+				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="mr-auto">

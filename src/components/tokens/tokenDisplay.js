@@ -2,7 +2,7 @@ import React from 'react';
 import './TokenDisplay.css';
 import axios from 'axios';
 
-
+//there are probably smarter ways of going about doing this, but not bad for my first React component :)
 class TokenDisplay extends React.Component {
 	constructor(props) {
 		super(props);
@@ -13,11 +13,13 @@ class TokenDisplay extends React.Component {
 		};
 	}
 	componentDidMount() {
+		//initialize random state
 		const NUMTOKENS = 7;
 		const min = 0;
 		const max = NUMTOKENS;
 		const rand = Math.floor(min + Math.random() * (max - min));
 		this.setState({randomNo: this.state.randomNo + rand});
+		//init metaData and imgURLS
 		let metaData = this.state.tokenMetaData;
 		for(var i=1; i <=NUMTOKENS; i++){
 			axios.get('https://crypto-forest.herokuapp.com/api/creature/' + i)
@@ -36,15 +38,15 @@ class TokenDisplay extends React.Component {
 		}
 	}
 	renderImage() {
+		//makes the src random
 		let rand = this.state.randomNo;
 		let string = this.state.imageURLS[rand];
-		console.log(rand)
 		return string;
 	}
 	render() {
 		return(
 			<div>
-				<img height="350px" className="tokenImages" src={this.renderImage()} alt="" />
+				<img className="tokenImages" src={this.renderImage()} alt="" />
 			</div>
 		);
 	}

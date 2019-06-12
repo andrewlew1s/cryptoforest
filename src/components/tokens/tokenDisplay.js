@@ -13,11 +13,11 @@ class TokenDisplay extends React.Component {
 		};
 	}
 	componentDidMount() {
+		const NUMTOKENS = 7;
 		const min = 0;
-		const max = 7;
+		const max = NUMTOKENS;
 		const rand = Math.floor(min + Math.random() * (max - min));
 		this.setState({randomNo: this.state.randomNo + rand});
-		const NUMTOKENS = 7;
 		let metaData = this.state.tokenMetaData;
 		for(var i=1; i <=NUMTOKENS; i++){
 			axios.get('https://crypto-forest.herokuapp.com/api/creature/' + i)

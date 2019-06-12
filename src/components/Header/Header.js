@@ -20,7 +20,6 @@ const header = () => {
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="mr-auto">
-						<Nav.Link href="#home">About</Nav.Link>
 						<Nav.Link href="https://opensea.io/category/cryptoforest" target="_blank">OpenSea</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>

@@ -45,9 +45,7 @@ class TokenDisplay extends React.Component {
 	}
 	render() {
 		return(
-			<div>
-				<img className="tokenImages" src={this.renderImage()} alt="" />
-			</div>
+			<img className="tokenImages" src={this.renderImage()} alt="" />
 		);
 	}
 }

@@ -1,0 +1,14 @@
+.windowWrapper {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	flex-shrink: 10;
+	justify-content: space-around;
+	max-width: 100%;
+	height: auto;
+}
+
+.windowText {
+	display: table-cell;
+	text-align: center;
+}

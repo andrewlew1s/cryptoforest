@@ -1,0 +1,7 @@
+.mintButton {
+	padding: 2rem;
+}
+
+.mintButton:active {
+	transform: translateY(4px);
+}
